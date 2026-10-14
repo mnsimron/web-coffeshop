@@ -14,48 +14,47 @@ import type { IconType } from "react-icons";
 const features: { icon: IconType; title: string; description: string }[] = [
   {
     icon: FiZap,
-    title: "Order at your own pace",
+    title: "Pesan langsung dari meja",
     description:
-      "Scan the code at your table, browse the menu, and send your order straight to our team.",
+      "Pindai kode di meja, pilih menu yang kamu suka, lalu pesanan langsung masuk ke tim kami.",
   },
   {
     icon: FiCreditCard,
-    title: "Pay the easy way",
-    description:
-      "Settle up with QRIS in a few taps, or choose cash when you order.",
+    title: "Bayar praktis dengan QRIS",
+    description: "Bayar lewat QRIS atau pilih tunai saat memesan.",
   },
   {
     icon: FiMonitor,
-    title: "Know what’s brewing",
+    title: "Pesanan langsung ke bar",
     description:
-      "Your order heads directly to the bar, where our team keeps every cup moving.",
+      "Pesananmu diteruskan ke layar bar agar bisa segera disiapkan.",
   },
 ];
 
 const demoLinks: { icon: IconType; title: string; description: string; href: string }[] = [
   {
     icon: FiCoffee,
-    title: "Customer menu",
-    description: "Order from your table",
+    title: "Menu pelanggan",
+    description: "Pilih dan pesan dari meja",
     href: "/table/05",
   },
   {
     icon: FiCreditCard,
-    title: "Cashier POS",
-    description: "Create and manage orders",
+    title: "Kasir POS",
+    description: "Kelola pesanan di kasir",
     href: "/kasir",
   },
   {
     icon: FiMonitor,
-    title: "Bar display",
-    description: "Follow the live order queue",
+    title: "Layar bar",
+    description: "Pantau antrean pesanan",
     href: "/bar",
   },
 ];
 
 function BrandMark() {
   return (
-    <Link href="/" className="group inline-flex items-center gap-3" aria-label="XYZ Coffee & Eatery home">
+    <Link href="/" className="group inline-flex items-center gap-3" aria-label="Beranda XYZ Coffee & Eatery">
       <span className="grid size-10 place-items-center rounded-sm bg-brand-primary text-white transition-transform duration-300 group-hover:-rotate-6">
         <FiCoffee aria-hidden="true" size={20} />
       </span>
@@ -79,13 +78,13 @@ function Header() {
 
         <nav aria-label="Main navigation" className="hidden items-center gap-8 md:flex">
           <a className="text-sm font-medium text-slate-600 transition-colors hover:text-brand-primary" href="#story">
-            Our place
+            Tentang kami
           </a>
           <a className="text-sm font-medium text-slate-600 transition-colors hover:text-brand-primary" href="#ordering">
-            How it works
+            Cara pesan
           </a>
           <a className="text-sm font-medium text-slate-600 transition-colors hover:text-brand-primary" href="#visit">
-            Visit us
+            Lokasi
           </a>
         </nav>
 
@@ -94,19 +93,19 @@ function Header() {
             href="/kasir"
             className="hidden rounded-sm px-3 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-white hover:text-brand-primary sm:inline-flex"
           >
-            Kasir POS
+            Kasir
           </Link>
           <Link
             href="/bar"
             className="hidden rounded-sm px-3 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-white hover:text-brand-primary sm:inline-flex"
           >
-            Bar screen
+            Layar bar
           </Link>
           <Link
             href="/table/05"
             className="inline-flex min-h-10 items-center gap-2 rounded-sm bg-brand-primary px-4 text-sm font-semibold text-white transition-colors hover:bg-brand-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
           >
-            Order now <FiArrowRight aria-hidden="true" size={15} />
+            Lihat menu <FiArrowRight aria-hidden="true" size={15} />
           </Link>
         </div>
       </div>
@@ -120,28 +119,28 @@ function Hero() {
       <div className="flex flex-col items-start lg:py-8">
         <p className="mb-6 inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">
           <span className="h-px w-7 bg-brand-primary" />
-          Coffee, comfort & good company
+          Kopi enak, suasana nyaman
         </p>
         <h1 className="max-w-[620px] text-[46px] font-semibold leading-[1.05] tracking-[-0.035em] text-brand-secondary sm:text-[60px] lg:text-[68px]">
-          Make room for
-          <span className="block text-brand-primary">a better break.</span>
+          Jeda sebentar,
+          <span className="block text-brand-primary">nikmati yang enak.</span>
         </h1>
         <p className="mt-6 max-w-[480px] text-base leading-7 text-slate-600 sm:text-lg sm:leading-8">
-          Thoughtfully brewed coffee, something lovely to eat, and a little more
-          time to enjoy it. Your table is ready.
+          Seduhan kopi dan makanan yang dibuat dengan teliti, untuk menemani
+          waktu santaimu. Pilih tempat duduk, lalu pesan dari meja.
         </p>
         <div className="mt-8 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
           <Link
             href="/table/05"
             className="inline-flex min-h-12 items-center justify-center gap-3 rounded-sm bg-brand-primary px-6 text-sm font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-brand-primary-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary"
           >
-            Order via QR Code <FiArrowRight aria-hidden="true" size={16} />
+            Pesan dari meja <FiArrowRight aria-hidden="true" size={16} />
           </Link>
           <a
             href="#ordering"
             className="inline-flex min-h-12 items-center justify-center gap-3 rounded-sm border border-slate-300 bg-transparent px-6 text-sm font-semibold text-brand-secondary transition-colors hover:border-brand-primary hover:text-brand-primary"
           >
-            Explore the experience <FiArrowDownRight aria-hidden="true" size={16} />
+            Lihat cara pesan <FiArrowDownRight aria-hidden="true" size={16} />
           </a>
         </div>
         <div className="mt-10 flex items-center gap-3 border-t border-slate-200 pt-5">
@@ -151,9 +150,9 @@ function Hero() {
             <span className="size-8 rounded-full border-2 border-brand-bg bg-[#9b6e52]" />
           </div>
           <p className="text-xs leading-5 text-slate-500">
-            <span className="font-semibold text-brand-secondary">Made for your everyday</span>
+            <span className="font-semibold text-brand-secondary">Tempat singgah sehari-hari</span>
             <br />
-            Fresh cups, warm welcomes.
+            Kopi diseduh, kamu disambut.
           </p>
         </div>
       </div>
@@ -162,7 +161,7 @@ function Hero() {
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-[1.03]"
           role="img"
-          aria-label="Freshly brewed coffee served in a bright, welcoming cafe"
+          aria-label="Secangkir kopi yang baru diseduh di dalam kedai"
           style={{
             backgroundImage:
               "url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1400&q=85')",
@@ -171,9 +170,9 @@ function Hero() {
         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 bg-brand-secondary/80 p-5 text-white sm:p-6">
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-white/70">
-              Your neighborhood coffee stop
+              Teman jeda di sekitar rumah
             </p>
-            <p className="mt-1 text-lg font-semibold">Good things, made fresh.</p>
+            <p className="mt-1 text-lg font-semibold">Disiapkan segar setiap hari.</p>
           </div>
           <FiCoffee aria-hidden="true" className="mb-1 shrink-0 text-white/80" size={22} />
         </div>
@@ -189,14 +188,14 @@ function OrderingFeatures() {
         <div className="mb-9 flex flex-col justify-between gap-4 sm:mb-12 sm:flex-row sm:items-end">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-primary">
-              Easy from the first sip
+              Pesan tanpa ribet
             </p>
             <h2 className="mt-3 text-3xl font-semibold tracking-[-0.025em] text-brand-secondary sm:text-4xl">
-              Your table, your way.
+              Pilih, pesan, tinggal nikmati.
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-6 text-slate-500">
-            A smoother visit, from the first order to the last little treat.
+            Pesan dari meja, lalu biar kami yang menyiapkannya.
           </p>
         </div>
 
@@ -237,13 +236,13 @@ function DemoAccess() {
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-16 sm:px-8 sm:py-20 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.18em] text-blue-300">
-            Take a closer look
+            Coba langsung
           </p>
           <h2 className="mt-3 max-w-sm text-3xl font-semibold tracking-[-0.025em] sm:text-4xl">
-            One cafe. Three ways in.
+            Lihat dari tiga sisi.
           </h2>
           <p className="mt-4 max-w-sm text-sm leading-6 text-slate-300">
-            Step into the customer menu, cashier station, or live bar queue.
+            Coba menu pelanggan, halaman kasir, atau antrean pesanan di bar.
           </p>
         </div>
 
@@ -286,28 +285,28 @@ function Footer() {
         <div>
           <BrandMark />
           <p className="mt-4 max-w-xs text-sm leading-6 text-slate-500">
-            A neighborhood place for good coffee, good food, and unhurried moments.
+            Kopi dan makanan enak untuk menemani obrolan dan waktu santaimu.
           </p>
         </div>
         <div className="flex items-start gap-3">
           <FiMapPin aria-hidden="true" className="mt-0.5 shrink-0 text-brand-primary" size={17} />
           <div>
-            <p className="text-sm font-semibold text-brand-secondary">Find us</p>
-            <p className="mt-1 text-sm leading-6 text-slate-500">Downtown, Your City</p>
+            <p className="text-sm font-semibold text-brand-secondary">Alamat</p>
+            <p className="mt-1 text-sm leading-6 text-slate-500">Pusat Kota, Indonesia</p>
           </div>
         </div>
         <div className="flex items-start gap-3">
           <FiClock aria-hidden="true" className="mt-0.5 shrink-0 text-brand-primary" size={17} />
           <div>
-            <p className="text-sm font-semibold text-brand-secondary">Opening hours</p>
-            <p className="mt-1 text-sm leading-6 text-slate-500">Every day, 8:00 AM – 9:00 PM</p>
+            <p className="text-sm font-semibold text-brand-secondary">Jam buka</p>
+            <p className="mt-1 text-sm leading-6 text-slate-500">Setiap hari, 08.00–21.00</p>
           </div>
         </div>
       </div>
       <div className="border-t border-slate-200">
         <div className="mx-auto flex max-w-7xl flex-col gap-2 px-5 py-5 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8">
-          <p>© 2026 XYZ Coffee & Eatery. All rights reserved.</p>
-          <p>Made with care, served fresh.</p>
+          <p>© 2026 XYZ Coffee & Eatery. Hak cipta dilindungi.</p>
+          <p>Diseduh dengan teliti, disajikan hangat.</p>
         </div>
       </div>
     </footer>
